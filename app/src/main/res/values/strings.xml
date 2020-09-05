@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ElderlyCareGamified</string>
+    <string name="title_activity_elderly">ElderlyActivity</string>
+    <string name="title_activity_young">YoungActivity</string>
 </resources>

@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".YoungActivity"
+            android:label="@string/title_activity_young"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ElderlyActivity"
+            android:label="@string/title_activity_elderly"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
