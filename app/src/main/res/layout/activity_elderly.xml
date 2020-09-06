@@ -10,12 +10,12 @@
 
     <Button
         android:id="@+id/button_create_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="164dp"
+        android:layout_height="47dp"
         android:layout_marginBottom="20dp"
+        android:background="#b0ceec"
         android:text="Create New Task"
         android:textColor="#000000"
-        android:background="#b0ceec"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -79,78 +79,84 @@
 
     <Button
         android:id="@+id/button_clear_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="412dp"
+        android:layout_height="72dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="574dp" />
 
     <TextView
         android:id="@+id/textView_loc3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="165dp" />
+        android:layout_width="375dp"
+        android:layout_height="28dp"
+        android:text="Richmond, VA"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="543dp" />
 
     <TextView
         android:id="@+id/textView_task3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="149dp" />
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:text="Buy Groceries"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="482dp" />
 
     <Button
         android:id="@+id/button_clear_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="417dp"
+        android:layout_height="71dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="87dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="370dp" />
 
     <TextView
         android:id="@+id/textView_loc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="106dp" />
+        android:layout_width="390dp"
+        android:layout_height="31dp"
+        android:text="Newport News,VA"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="329dp" />
 
     <TextView
         android:id="@+id/textView_task2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="87dp" />
+        android:layout_width="394dp"
+        android:layout_height="51dp"
+        android:text="Mow Lawn"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="278dp" />
 
     <Button
         android:id="@+id/button_clear_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="70dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="30dp" />
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="162dp" />
 
     <TextView
         android:id="@+id/textView_loc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:layout_width="364dp"
+        android:layout_height="24dp"
+        android:text="Philadelpia, PA"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp" />
 
     <TextView
         android:id="@+id/textView_task1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="30dp" />
+        android:layout_width="368dp"
+        android:layout_height="48dp"
+        android:text="Company to Talk to"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="70dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
