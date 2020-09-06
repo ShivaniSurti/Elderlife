@@ -79,78 +79,78 @@
 
     <Button
         android:id="@+id/button_clear_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="64dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="279dp" />
 
     <TextView
         android:id="@+id/textView_loc3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="263dp"
+        android:layout_height="27dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="165dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="313dp" />
 
     <TextView
         android:id="@+id/textView_task3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="263dp"
+        android:layout_height="30dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="279dp" />
 
     <Button
         android:id="@+id/button_clear_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="119dp"
+        android:layout_height="59dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="87dp" />
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="181dp" />
 
     <TextView
         android:id="@+id/textView_loc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="266dp"
+        android:layout_height="26dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="206dp" />
 
     <TextView
         android:id="@+id/textView_task2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="21dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="87dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="184dp" />
 
     <Button
         android:id="@+id/button_clear_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_height="62dp"
         android:background="#b0ceec"
         android:text="@string/clear_task"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="30dp" />
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="84dp" />
 
     <TextView
         android:id="@+id/textView_loc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="274dp"
+        android:layout_height="21dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="51dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp" />
 
     <TextView
         android:id="@+id/textView_task1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="267dp"
+        android:layout_height="25dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="30dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
