@@ -4,20 +4,26 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.elderlycaregamified.ElderlyActivity.address1;
@@ -76,9 +82,30 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
 
         // Add a marker in Sydney and move the camera
         LatLng loc1 = getLocationFromAddress(getApplicationContext(), address1);
-        mMap.addMarker(new MarkerOptions().position(loc1).title(task1).icon(BitmapDescriptorFactory.fromResource(stickerIcon)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(loc1));
-        CameraUpdateFactory.scrollBy(50, 50);
+
+
+        ArrayList<MarkerOptions> markers = new ArrayList<>();
+        MarkerOptions marker1 = new MarkerOptions().position(loc1).title(task1).icon(BitmapDescriptorFactory.fromResource(stickerIcon));
+
+        markers.add(marker1);
+
+
+        mMap.addMarker(marker1);
+       // mMap.moveCamera(CameraUpdateFactory.newLatLng(loc1));
+
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+
+        //For when we have multiple markers
+        for (MarkerOptions marker : markers) {
+
+            builder.include(marker.getPosition());
+        }
+        LatLngBounds bounds = builder.build();
+
+        int padding = 0; // offset from edges of the map in pixels
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+
+        mMap.moveCamera(cu);
     }
 
     public LatLng getLocationFromAddress(Context context, String strAddress) {
