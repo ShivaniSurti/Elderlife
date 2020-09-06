@@ -11,11 +11,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class YoungActivity extends AppCompatActivity
 {
 
-    Button buttonTasks;
+    private Button buttonTasks;
+    private TextView textViewtask;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,7 +25,11 @@ public class YoungActivity extends AppCompatActivity
         setContentView(R.layout.activity_young);
 
         buttonTasks = (Button) findViewById(R.id.button_see_tasks);
+        textViewtask = (TextView) findViewById(R.id.textView_young_task);
 
+        String task = getIntent().getStringExtra("TASK_NAME");
+
+        textViewtask.setText(task);
     }
 
     public void seeTasks(View view)

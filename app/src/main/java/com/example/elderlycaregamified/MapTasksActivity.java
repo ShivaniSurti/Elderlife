@@ -3,6 +3,7 @@ package com.example.elderlycaregamified;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
@@ -34,6 +36,7 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -50,6 +53,22 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
     public void onMapReady(GoogleMap googleMap)
     {
         mMap = googleMap;
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
+        {
+
+            @Override
+            public boolean onMarkerClick(Marker marker)
+            {
+                Intent intent = new Intent(MapTasksActivity.this, YoungActivity.class);
+                intent.putExtra("TASK_NAME", marker.getTitle());
+
+                startActivity(intent);
+
+                return true;
+            }
+        });
+
 
         // Add a marker in Sydney and move the camera
         LatLng loc1 = getLocationFromAddress(getApplicationContext(), address1);
@@ -81,4 +100,6 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
 
         return p1;
     }
+
+
 }
