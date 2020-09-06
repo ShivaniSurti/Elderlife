@@ -3,4 +3,5 @@
     <string name="title_activity_elderly">ElderlyActivity</string>
     <string name="title_activity_young">YoungActivity</string>
     <string name="clear_task">Clear Task</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

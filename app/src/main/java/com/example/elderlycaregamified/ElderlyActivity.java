@@ -1,5 +1,6 @@
 package com.example.elderlycaregamified;
 
+import android.location.Address;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -18,6 +19,9 @@ public class ElderlyActivity extends AppCompatActivity implements TaskDialog.Tas
     private Button buttonTask;
     private TextView textViewTask1;
     private TextView textViewLoc1;
+
+    public static String address1 = "";
+    public static String task1 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,5 +53,8 @@ public class ElderlyActivity extends AppCompatActivity implements TaskDialog.Tas
     {
         textViewTask1.setText(task);
         textViewLoc1.setText(location);
+
+        address1 = location;
+        task1 = task;
     }
 }
