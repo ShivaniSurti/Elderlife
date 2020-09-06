@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -21,11 +22,13 @@ import java.util.List;
 
 import static com.example.elderlycaregamified.ElderlyActivity.address1;
 import static com.example.elderlycaregamified.ElderlyActivity.task1;
+import static com.example.elderlycaregamified.TaskDialog.stickerIcon;
 
 public class MapTasksActivity extends FragmentActivity implements OnMapReadyCallback
 {
 
     private GoogleMap mMap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,6 +39,7 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
     }
 
@@ -72,7 +76,7 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
 
         // Add a marker in Sydney and move the camera
         LatLng loc1 = getLocationFromAddress(getApplicationContext(), address1);
-        mMap.addMarker(new MarkerOptions().position(loc1).title(task1));
+        mMap.addMarker(new MarkerOptions().position(loc1).title(task1).icon(BitmapDescriptorFactory.fromResource(stickerIcon)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(loc1));
         CameraUpdateFactory.scrollBy(50, 50);
     }

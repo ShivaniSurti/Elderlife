@@ -19,4 +19,29 @@
         android:hint="Enter the location"
         android:layout_alignParentLeft="true" />
 
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup_sticker"
+        android:layout_below="@id/edit_location">
+        <RadioButton android:id="@+id/radio_boba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boba" />
+        <RadioButton android:id="@+id/radio_peach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peach" />
+        <RadioButton android:id="@+id/radio_panda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panda" />
+        <RadioButton android:id="@+id/radio_sushi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sushi" />
+
+    </RadioGroup>
+
 </RelativeLayout>
