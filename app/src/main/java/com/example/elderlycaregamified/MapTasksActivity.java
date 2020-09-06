@@ -27,8 +27,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.elderlycaregamified.ElderlyActivity.address1;
+import static com.example.elderlycaregamified.ElderlyActivity.address2;
 import static com.example.elderlycaregamified.ElderlyActivity.task1;
-import static com.example.elderlycaregamified.TaskDialog.stickerIcon;
+import static com.example.elderlycaregamified.ElderlyActivity.task2;
+import static com.example.elderlycaregamified.TaskDialog.stickerIcon1;
+import static com.example.elderlycaregamified.TaskDialog.stickerIcon2;
+import static com.example.elderlycaregamified.YoungActivity.clickedMarker;
 
 public class MapTasksActivity extends FragmentActivity implements OnMapReadyCallback
 {
@@ -72,6 +76,9 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
             {
                 Intent intent = new Intent(MapTasksActivity.this, YoungActivity.class);
                 intent.putExtra("TASK_NAME", marker.getTitle());
+                intent.putExtra("LOCATION_NAME", marker.getSnippet());
+
+                clickedMarker = true;
 
                 startActivity(intent);
 
@@ -80,17 +87,19 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
         });
 
 
-        // Add a marker in Sydney and move the camera
         LatLng loc1 = getLocationFromAddress(getApplicationContext(), address1);
-
+        LatLng loc2 = getLocationFromAddress(getApplicationContext(), address2);
 
         ArrayList<MarkerOptions> markers = new ArrayList<>();
-        MarkerOptions marker1 = new MarkerOptions().position(loc1).title(task1).icon(BitmapDescriptorFactory.fromResource(stickerIcon));
+        MarkerOptions marker1 = new MarkerOptions().position(loc1).title(task1).icon(BitmapDescriptorFactory.fromResource(stickerIcon1)).snippet(address1);
+        MarkerOptions marker2 = new MarkerOptions().position(loc2).title(task2).icon(BitmapDescriptorFactory.fromResource(stickerIcon2)).snippet(address2);
 
         markers.add(marker1);
+        markers.add(marker2);
 
 
         mMap.addMarker(marker1);
+        mMap.addMarker(marker2);
        // mMap.moveCamera(CameraUpdateFactory.newLatLng(loc1));
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -102,7 +111,7 @@ public class MapTasksActivity extends FragmentActivity implements OnMapReadyCall
         }
         LatLngBounds bounds = builder.build();
 
-        int padding = 0; // offset from edges of the map in pixels
+        int padding = 30; // offset from edges of the map in pixels
         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
 
         mMap.moveCamera(cu);

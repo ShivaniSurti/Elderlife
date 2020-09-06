@@ -13,6 +13,8 @@ import android.widget.RadioGroup;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import static com.example.elderlycaregamified.ElderlyActivity.elderCount;
+
 public class TaskDialog extends AppCompatDialogFragment
 {
     private EditText editTextTask;
@@ -21,7 +23,10 @@ public class TaskDialog extends AppCompatDialogFragment
 
     private RadioGroup stickerRadioGroup;
 
-    public static int stickerIcon;
+    //public static int cnt = ;
+    public static int stickerIcon1 = 0;
+    public static int stickerIcon2 = 0;
+    public static int[] stickerIcons;
 
 
     @Override
@@ -62,16 +67,29 @@ public class TaskDialog extends AppCompatDialogFragment
                 switch(checkedId)
                 {
                     case R.id.radio_boba:
-                            stickerIcon = R.drawable.boba;
+                        if(elderCount == 1)
+                            stickerIcon1 = R.drawable.boba;
+                        else
+                            stickerIcon2 = R.drawable.boba;
+
                         break;
                     case R.id.radio_panda:
-                            stickerIcon = R.drawable.pandas;
+                        if(elderCount == 1)
+                            stickerIcon1 = R.drawable.pandas;
+                        else
+                            stickerIcon2 = R.drawable.pandas;
                         break;
                     case R.id.radio_peach:
-                            stickerIcon = R.drawable.peach;
+                        if(elderCount == 1)
+                            stickerIcon1 = R.drawable.peach;
+                        else
+                            stickerIcon2 = R.drawable.peach;
                         break;
                     case R.id.radio_sushi:
-                            stickerIcon = R.drawable.sushi;
+                        if(elderCount == 1)
+                            stickerIcon1 = R.drawable.sushi;
+                        else
+                            stickerIcon2 = R.drawable.sushi;
                         break;
                 }
             }
